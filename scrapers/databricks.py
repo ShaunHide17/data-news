@@ -169,7 +169,7 @@ class DatabricksScraper(BaseScraper):
     def _summarize(self, content: str) -> str | None:
         try:
             response = self._llm.messages.create(
-                model="claude-opus-4-8",
+                model="claude-opus-4-8", # TODO: Change this to a cheaper model
                 max_tokens=256,
                 messages=[{
                     "role": "user",
