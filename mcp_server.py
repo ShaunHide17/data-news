@@ -17,7 +17,8 @@ mcp = FastMCP(
     instructions=(
         "Provides read access to the Databricks engineering blog database. "
         "Use list_posts to browse recent articles, get_post to read one in full "
-        "for Q&A, and get_post_summary for a quick AI-generated overview."
+        "for Q&A, and get_post_summary for a quick AI-generated overview. "
+        "Start with: uv run --directory /Users/shaunhide/projects/data-news python mcp_server.py"
     ),
 )
 

@@ -58,8 +58,7 @@ Add the following to `~/Library/Application Support/Claude/claude_desktop_config
   "mcpServers": {
     "data-news": {
       "command": "uv",
-      "args": ["run", "python", "mcp_server.py"],
-      "cwd": "/absolute/path/to/data-news"
+      "args": ["run", "--directory", "/absolute/path/to/data-news", "python", "mcp_server.py"]
     }
   }
 }
@@ -72,7 +71,7 @@ Replace `/absolute/path/to/data-news` with the actual path on your machine. Rest
 Run inside the project directory:
 
 ```bash
-claude mcp add data-news -- uv run python mcp_server.py
+claude mcp add data-news -- uv run --directory /absolute/path/to/data-news python mcp_server.py
 ```
 
 ## Project structure
